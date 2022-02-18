@@ -47,43 +47,24 @@ const NowPlaying = (): JSX.Element => {
 
   return(
     <AnimateInOutDiv>
+      <LoadingButton
+        size={"small"}
+        onClick={() => setDataState("idle")}
+        loading={dataState === "loading" }
+        variant="outlined"
+        color={darkMode ? "secondary" : "primary"}
+        sx={{
+          position: "absolute",
+          top: -31,
+          right: 0,
+          marginRight: (theme) => theme.spacing(1)
+        }}
+      >
+        Refresh
+      </LoadingButton>
       <AnimateGradientBackgroundDiv />
       <StyledProfileCardDiv>
         <Stack sx={{ gap: 1, position:"relative" }}>
-        <StyledNavAreaDiv>
-            <CustomBaseButton
-              size={"small"}
-              onClick={() => setHomePageState("profile")}
-              sx={{
-                marginLeft: (theme) =>  theme.spacing(1),
-              }}
-              startIcon={<HomeIcon/>}
-            >
-              Home
-            </CustomBaseButton>
-            <LoadingButton
-              size={"small"}
-              onClick={() => setDataState("idle")}
-              loading={dataState === "loading" }
-              variant="outlined"
-              color={darkMode ? "secondary" : "primary"}
-              sx={{
-                marginRight: (theme) => theme.spacing(1)
-              }}
-            >
-              Refresh
-            </LoadingButton>
-            <CustomBaseButton
-              size={"small"}
-              onClick={() => setHomePageState("projects")}
-              sx={{
-                marginLeft: (theme) =>  theme.spacing(1),
-              }}
-              startIcon={<ListIcon/>}
-            >
-              Projects
-            </CustomBaseButton>
-          </StyledNavAreaDiv>
           <StyledResponsiveGrid>
             <Stack direction={"row"}>
               { nowPlaying !== null &&
@@ -91,7 +72,7 @@ const NowPlaying = (): JSX.Element => {
                 sx={{
                   display: 'flex',
                   justifyContent: "center", 
-                  maxHeight: "84%",
+                  maxHeight: (theme) => theme.breakpoints.up("sm") ? "84%" : "92%",
                   boxShadow: "rgb(0 0 0 / 17%) 1px 1px 6px 0px",
                   border: "1px solid #0000002e",
                   borderRadius: "14px",

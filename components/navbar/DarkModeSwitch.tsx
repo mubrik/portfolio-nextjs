@@ -36,7 +36,7 @@ const DarkModeSwitch = (): JSX.Element => {
           color={darkMode ? "secondary" : "primary"}
           onClick={() => setDarkMode(state => !state)}
         >
-          <EmojiObjectsOutlined fontSize={"large"}/>
+          <EmojiObjectsOutlined fontSize={"medium"}/>
         </IconButton>
       </motion.div>
     </StyledDiv>

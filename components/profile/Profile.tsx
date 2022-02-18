@@ -28,28 +28,6 @@ const Profile = (): JSX.Element => {
     <AnimateInOutDiv>
       <AnimateGradientBackgroundDiv/>
       <StyledProfileCardDiv>
-        <StyledNavAreaDiv>
-          <CustomBaseButton
-            size={"small"}
-            onClick={() => setHomePageState("projects")}
-            sx={{
-              marginLeft: (theme) =>  theme.spacing(1),
-            }}
-            startIcon={<ListIcon/>}
-          >
-            Projects
-          </CustomBaseButton>
-          <CustomBaseButton
-            size={"small"}
-            onClick={() => setHomePageState("nowPlaying")}
-            sx={{
-              marginRight: (theme) =>  theme.spacing(1),
-            }}
-            startIcon={<MusicNoteIcon/>}
-          >
-            Playlist
-          </CustomBaseButton>
-        </StyledNavAreaDiv>
         <StyledProfileAviDiv>
           <Avatar 
             src={darkMode ? "/avi2.png" : "/avi.png"} 

@@ -20,7 +20,7 @@ const AnimateInOutDiv = ({ children }: IComponentProps): JSX.Element => {
         animate={{
           scale: 1,
           translateX: "0%",
-          translateY: "0%",
+          translateY: "10%",
           transition: {
             duration: 1,
             type: "spring"

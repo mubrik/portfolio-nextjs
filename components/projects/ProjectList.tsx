@@ -36,30 +36,6 @@ const ProjectList = (): JSX.Element => {
   return(
     <AnimateInOutDiv>
       <AnimateGradientBackgroundDiv/>
-      <StyledProfileCardDiv>
-        <StyledNavAreaDiv>
-          <CustomBaseButton
-            size={"small"}
-            onClick={() => setHomePageState("profile")}
-            sx={{
-              marginLeft: (theme) =>  theme.spacing(1),
-            }}
-            startIcon={<HomeIcon/>}
-          >
-            Home
-          </CustomBaseButton>
-          <CustomBaseButton
-            size={"small"}
-            onClick={() => setHomePageState("nowPlaying")}
-            sx={{
-              marginRight: (theme) =>  theme.spacing(1),
-            }}
-            startIcon={<MusicNoteIcon/>}
-          >
-            Playlist
-          </CustomBaseButton>
-        </StyledNavAreaDiv>
-      </StyledProfileCardDiv>
       <StyledProjectListDiv>
         { projectArray !== null ? 
             projectArray.map((item, index) => (

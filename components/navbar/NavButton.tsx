@@ -13,8 +13,8 @@ import { useHomePageState } from '../homepage/Homepage';
 // styled
 const StyledDiv = styled("div")(({theme}) => ({
   position: "relative",
-  border: `1px solid ${theme.palette.type == "dark" ? theme.palette.secondary.main : theme.palette.primary.main}`,
-  borderRadius: "18px",
+  // border: `1px solid ${theme.palette.type == "dark" ? theme.palette.secondary.main : theme.palette.primary.main}`,
+  // borderRadius: "18px",
   [theme.breakpoints.up("md")]: {
     marginLeft: theme.spacing(6)
   },
@@ -56,7 +56,7 @@ const NavButton = ({ children }:IComponentProps): JSX.Element => {
         color={darkMode ? "secondary" : "primary"}
         onClick={(e) => handleMenuClick(e)}
       >
-        <MenuOutlined/>
+        <MenuOutlined fontSize={"small"}/>
       </IconButton>
       <Menu
         open={menuShow}

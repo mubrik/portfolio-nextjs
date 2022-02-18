@@ -30,9 +30,9 @@ const AnimateGradientBackgroundDiv = ({ children }: IComponentProps): JSX.Elemen
           background: animateColors.bgColor,
           borderRadius: "0.9em",
           width: "95%",
-          height: isSmallScreen ? "83%" : "87%",
+          height: isSmallScreen ? "92%" : "93%",
           right: isSmallScreen ? 8 : 18,
-          top: 66,
+          top: 16,
           zIndex: -777,
           transition: {
             delay: 0.2,
