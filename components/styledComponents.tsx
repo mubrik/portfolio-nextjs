@@ -79,16 +79,13 @@ export const CustomNavButton = ({isActive, onClick, text, icon }: ICustomNavButt
           textTransform: "uppercase",
           minWidth: "64px",
           transition: '0.2s ease-out',
-          fontWeight: "600",
+          fontFamily: "ubuntu",
+          fontWeight: "300",
           fontSize: "0.8125rem",
           lineHeight: "1.75",
           color: (theme) => theme.palette.mode === "dark" ? "secondary.main" : "primary.main",
           "&:hover": {
             backgroundColor: (theme) => theme.palette.mode === "dark" ? `${theme.palette.secondary.main}0a` : `${theme.palette.primary.main}0a`,
-            "&:after": {
-              opacity: 1,
-              transform: 'scale(1) translateX(-50%)',
-            },
           },
           '&:after': {
             content: '""',
@@ -106,6 +103,7 @@ export const CustomNavButton = ({isActive, onClick, text, icon }: ICustomNavButt
           },
         },
         isActive && {
+          fontWeight: "500",
           "&:after": {
             opacity: 1,
             transform: 'scale(1) translateX(-50%)',

@@ -7,7 +7,7 @@ import { useDarkMode } from "../customContext/DarkModeContext";
 
 const NavbarLogo = (): JSX.Element => {
   // homepagae
-  const { state: homePageState } = useHomePageState();
+  const { state: homePageState, setHomePageState } = useHomePageState();
   // dk mode
   const { darkMode } = useDarkMode();
 
@@ -15,19 +15,21 @@ const NavbarLogo = (): JSX.Element => {
     <motion.div
       initial={{
         fontSize: "1.4rem",
-        color: "rgb(168 41 209 / 87%)",
+        color: "rgb(205 132 229 / 87%)",
+        cursor: "pointer",
         display: "flex",
         fontFamily: "ubuntu",
-        fontVariant: "small-caps",
+        fontVariant: "contextual",
         fontWeight: "400",
         textShadow: "0px 0px 0px #000000"
       }}
       animate={{
-        textShadow: "1px 0px 2px #0000009e",
+        textShadow: "1px 1px 2px #0000009e",
         transition: {
-          duration: 1
+          duration: 2
         }
       }}
+      onClick={() => setHomePageState("profile")}
     >
       <span>
         Mubrik&apos;s
@@ -47,7 +49,7 @@ const NavbarLogo = (): JSX.Element => {
           animate={{
             pathLength: 2,
             transition: {
-              duration: 1.5
+              duration: 2
             }
           }}
         />
