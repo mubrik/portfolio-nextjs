@@ -3,7 +3,7 @@ import { styled } from "@mui/material/styles";
 import { 
   Typography, TypographyProps,
   Button, ButtonProps,
-  Box, SvgIconTypeMap
+  Box
 } from '@mui/material';
 // dk mode
 import { useDarkMode } from "./customContext/DarkModeContext";

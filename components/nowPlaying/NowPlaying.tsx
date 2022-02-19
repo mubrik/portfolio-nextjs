@@ -66,13 +66,13 @@ const NowPlaying = (): JSX.Element => {
       <StyledProfileCardDiv>
         <Stack sx={{ gap: 1, position:"relative" }}>
           <StyledResponsiveGrid>
-            <Stack direction={"row"}>
+            <Stack direction={"column"}>
               { nowPlaying !== null &&
               <Card
                 sx={{
                   display: 'flex',
                   justifyContent: "center", 
-                  maxHeight: (theme) => theme.breakpoints.up("sm") ? "84%" : "92%",
+                  maxHeight: (theme) => theme.breakpoints.up("sm") ? "88%" : "92%",
                   boxShadow: "rgb(0 0 0 / 17%) 1px 1px 6px 0px",
                   border: "1px solid #0000002e",
                   borderRadius: "14px",

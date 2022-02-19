@@ -29,7 +29,7 @@ const AnimateGradientBackgroundDiv = ({ children }: IComponentProps): JSX.Elemen
         animate={{
           background: animateColors.bgColor,
           borderRadius: "0.9em",
-          width: "95%",
+          width: "94%",
           height: isSmallScreen ? "92%" : "93%",
           right: isSmallScreen ? 8 : 18,
           top: 16,
