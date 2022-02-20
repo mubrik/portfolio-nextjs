@@ -5,7 +5,7 @@ import {ILastFMTrackObj, ITrackDetail } from "../../../custom-types";
 const handler = async ( req: NextApiRequest, res: NextApiResponse<ITrackDetail[]>): Promise<void> => {
   if (req.method === "GET") {
     const response = await fetch(
-      `https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=mubrik&api_key=ae2c676a4406b4a3afdbe1f31413b72c&format=json&limit=4`
+      `https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=mubrik&api_key=${process.env.LASTFM_API}&format=json&limit=4`
     );
     const result = await response.json();
   

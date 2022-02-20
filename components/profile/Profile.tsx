@@ -36,9 +36,9 @@ const Profile = (): JSX.Element => {
           />
         </StyledProfileAviDiv>
         <StyledAboutDiv>
-          <CustomTypography>My name is Mubarak Yahaya, A developer from Nigeria. </CustomTypography>
-          <CustomTypography>I love good music, coffee and tweaking stuff :) </CustomTypography>
-          <CustomTypography>My current development stack includes Python, javaScript( typeScript ) and Linux </CustomTypography>
+          <CustomTypography>Hi &#x1F44B;, my name is mubarak yahaya, a software engineer from Nigeria. </CustomTypography>
+          <CustomTypography>I love good music, coffee, coding and gaming. </CustomTypography>
+          <CustomTypography>My current development stack includes javaScript(TypeScript), Python and Linux </CustomTypography>
         </StyledAboutDiv>
         <StyledParagraphDiv>
           <CustomTypography>Check out some of my</CustomTypography>
