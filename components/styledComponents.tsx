@@ -199,9 +199,9 @@ export const StyledProfileCardDiv = styled("div")(({theme}) => ({
   borderRadius: "0.9em",
   backdropFilter: "blur(2px)",
   minWidth:"100%", // mobile
-  [theme.breakpoints.up("xs")]: {
-    minWidth:"50vw"
-  },
+  // [theme.breakpoints.up("xs")]: {
+  //   minWidth:"50vw"
+  // },
   [theme.breakpoints.up("sm")]: {
     minWidth:"55vw"
   },

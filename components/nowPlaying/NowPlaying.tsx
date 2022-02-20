@@ -8,17 +8,15 @@ import { Stack, styled,
 import AnimateGradientBackgroundDiv from "../animation/AnimateGradientBackgroundDiv";
 import AnimateInOutDiv from "./AnimateInOutDiv";
 // styled
-import { StyledProfileCardDiv, StyledNavAreaDiv } from "../styledComponents";
+import { StyledProfileCardDiv } from "../styledComponents";
 // custom
-import { CustomBaseButton, CustomTypography } from "../styledComponents";
+import { CustomTypography } from "../styledComponents";
 // hooks
 import { useHomePageState } from "../homepage/Homepage";
 import { usePlaylist } from "./NowPlayingContext";
 import { useDarkMode } from "../customContext/DarkModeContext";
 // icon
 import LoadingButton from '@mui/lab/LoadingButton';
-import ListIcon from '@mui/icons-material/List';
-import HomeIcon from '@mui/icons-material/Home';
 
 const StyledResponsiveGrid = styled("div")(({theme}) => ({
   display: "grid",
@@ -64,20 +62,22 @@ const NowPlaying = (): JSX.Element => {
       </LoadingButton>
       <AnimateGradientBackgroundDiv />
       <StyledProfileCardDiv>
-        <Stack sx={{ gap: 1, position:"relative" }}>
           <StyledResponsiveGrid>
             <Stack direction={"column"}>
               { nowPlaying !== null &&
               <Card
-                sx={{
+                sx={(theme) => ({
                   display: 'flex',
                   justifyContent: "center", 
-                  maxHeight: (theme) => theme.breakpoints.up("sm") ? "88%" : "92%",
+                  maxHeight: "92%",
                   boxShadow: "rgb(0 0 0 / 17%) 1px 1px 6px 0px",
                   border: "1px solid #0000002e",
                   borderRadius: "14px",
-                  backgroundColor: "transparent"
-                }} 
+                  backgroundColor: "transparent",
+                  [theme.breakpoints.up("sm")]: {
+                    maxHeight: "88%"
+                  }
+                })} 
               >
                 <Box sx={{
                   display: 'flex', 
@@ -175,7 +175,6 @@ const NowPlaying = (): JSX.Element => {
               }
             </Stack>
           </StyledResponsiveGrid>
-        </Stack>
       </StyledProfileCardDiv>
     </AnimateInOutDiv>
   );

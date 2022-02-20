@@ -32,7 +32,7 @@ const NavbarLogo = (): JSX.Element => {
       onClick={() => setHomePageState("profile")}
     >
       <span>
-        Mubrik&apos;s
+        Mubrik
       </span>
       <motion.svg width={14} height={32} viewBox={"0 0 14 12"}>
         <motion.line
